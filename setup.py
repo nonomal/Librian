@@ -4,7 +4,7 @@ from pathlib import Path
 
 setuptools.setup(
     name='librian',
-    version='2.2.0',
+    version='2.3.0',
     author='RimoChan',
     author_email='the@librian.net',
     description='librian',
@@ -28,17 +28,6 @@ setuptools.setup(
         'Programming Language :: Python :: 3',
         'Operating System :: OS Independent',
     ],
-    install_requires=[
-        'liber>=1.0.1',
-        'rimo_utils>=1.9.0',
-        'pywebview>=6.0 ; sys_platform != "linux"',
-        'pywebview[qt]>=6.0 ; sys_platform == "linux"',
-        'cloudpickle>=1.2.2',
-        'opencc>=1.1.1',
-        'PyYAML>=6.0',
-        'fire>=0.2.1',
-        'requests>=2.24.0',
-        'libsass>=0.20.0',
-    ],
-    python_requires='>=3.7',
+    install_requires=open('requirements.txt', encoding='utf8').read().splitlines(),
+    python_requires='>=3.8',
 )
